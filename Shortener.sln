@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7B9C73ED-383B-4F3D-A78B-22F0E0B78DFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "src\Web\Web.csproj", "{B9141C96-1C76-4D96-99C2-92BBD7225166}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1B49D949-B2BD-430D-A811-27635397656F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "test\UnitTest\UnitTest.csproj", "{7D468A53-61ED-443E-B518-121D0C211E9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LoadTestK6", "LoadTestK6", "{2609D754-1548-4BE7-BC97-1D5989B331D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B9141C96-1C76-4D96-99C2-92BBD7225166} = {7B9C73ED-383B-4F3D-A78B-22F0E0B78DFA}
+		{7D468A53-61ED-443E-B518-121D0C211E9B} = {1B49D949-B2BD-430D-A811-27635397656F}
+		{2609D754-1548-4BE7-BC97-1D5989B331D2} = {1B49D949-B2BD-430D-A811-27635397656F}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9141C96-1C76-4D96-99C2-92BBD7225166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9141C96-1C76-4D96-99C2-92BBD7225166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9141C96-1C76-4D96-99C2-92BBD7225166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9141C96-1C76-4D96-99C2-92BBD7225166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D468A53-61ED-443E-B518-121D0C211E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D468A53-61ED-443E-B518-121D0C211E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D468A53-61ED-443E-B518-121D0C211E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D468A53-61ED-443E-B518-121D0C211E9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
