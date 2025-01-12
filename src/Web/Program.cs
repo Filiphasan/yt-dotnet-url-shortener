@@ -1,3 +1,4 @@
+using Scalar.AspNetCore;
 using Web;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,14 +11,18 @@ builder.Services.AddWeb(builder.Configuration);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.MapOpenApi();
+// /scalar/v1
+app.MapScalarApiReference(opt =>
 {
-    app.MapOpenApi();
-}
+    opt.WithTitle("URL Shortener API")
+        .WithDarkMode(true)
+        .WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.HttpClient);
+});
 
 app.UseHttpsRedirection();
 
 // Add test endpoint
-
+app.MapGet("/", () => "Hello World!");
 
 await app.RunAsync();
