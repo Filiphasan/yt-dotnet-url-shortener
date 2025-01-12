@@ -1,3 +1,4 @@
+using Carter;
 using Scalar.AspNetCore;
 using Web;
 
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddWeb(builder.Configuration);
+builder.Services.AddCarter();
 
 var app = builder.Build();
 
@@ -22,7 +24,5 @@ app.MapScalarApiReference(opt =>
 
 app.UseHttpsRedirection();
 
-// Add test endpoint
-app.MapGet("/", () => "Hello World!");
-
+app.MapCarter();
 await app.RunAsync();
